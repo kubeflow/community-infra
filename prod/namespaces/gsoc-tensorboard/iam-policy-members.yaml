@@ -6,7 +6,7 @@
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: kimwanstpd-owner
+  name: kimwanstpd-arrikto-owner
 spec:
   # replace ${PROJECT_ID?} with your project name
   member: user:kimwnasptd@arrikto.com
