@@ -6,7 +6,7 @@
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: jeremy-owner
+  name: jeremy-owner2
 spec:
   # replace ${PROJECT_ID?} with your project name
   member: user:jeremy@lewi.us
@@ -25,4 +25,4 @@ spec:
     # TODO(jlewi): This is the newer syntax which work in the next 
     # release of ACM
     #external: projects/gsoc-tensorboard
-    external: gsoc-tensorboard
+    external: "gsoc-tensorboard"
