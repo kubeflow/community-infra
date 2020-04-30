@@ -1,0 +1,11 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+    name: management
+upstream:
+    type: git
+    git:
+        commit: e3d48ed8d3e1f7267b29278c3daee27f3872893a
+        repo: https://github.com/kubeflow/gcp-blueprints
+        directory: /management
+        ref: master

@@ -1,0 +1,5 @@
+apiVersion: container.cnrm.cloud.google.com/v1alpha2
+kind: ContainerNodePool
+metadata:
+  clusterName: "kf-kcc-admin/us-central1/kf-community-admin" # {"type":"string","x-kustomize":{"setBy":"kpt","partialSetters":[{"name":"gcloud.core.project","value":"kf-kcc-admin"},{"name":"name","value":"kf-community-admin"},{"name":"location","value":"us-central1"}]}}
+  name: kf-community-admin-pool # {"type":"string","x-kustomize":{"partialSetters":[{"name":"gcloud.core.project","value":"project-id"},{"name":"name","value":"kf-community-admin"},{"name":"location","value":"us-central1-f"}]}}

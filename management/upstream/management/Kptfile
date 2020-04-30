@@ -1,0 +1,11 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+    name: management
+upstream:
+    type: git
+    git:
+        commit: cbbc690a3ffb87dc5bdc0c261878a9c04ed685c3
+        repo: https://github.com/jlewi/manifests
+        directory: /gcp/v2/management
+        ref: blueprints
