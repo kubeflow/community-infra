@@ -13,10 +13,11 @@ spec:
   # You should aim to scope down the permissions you needed
   # right now owner is needed to deploy kubeflow
   role: roles/owner
-  condition:
-    title: expires_after_2020_10_01
-    description: Expires at midnight of 2020-10-01
-    expression: request.time < timestamp("2020-01-01T00:00:00Z")
+  # TODO(jlewi): This doesn't appear to work.
+  #condition:
+  #  title: expires_after_2020_10_01
+  #  description: Expires at midnight of 2020-10-01
+  #  expression: request.time < timestamp("2020-01-01T00:00:00Z")
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
