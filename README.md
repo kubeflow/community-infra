@@ -16,3 +16,6 @@ The management cluster is setup using the Kubeflow [management blueprint](kpt pk
    * Create the service account 'cnrm-system' in project `kf-kcc-admin`
    * **Note** It looks like when using ACM to install and manage CNRM you can't use workload identity and need to provide
      a GCP service account key.
+
+
+1. Make sure the CNRM service account has roles `roles/owner` and project creator on the community folder
