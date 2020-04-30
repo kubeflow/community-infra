@@ -6,10 +6,10 @@
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: kimwanstpd-arrikto-owner
+  name: jeremy-owner
 spec:
   # replace ${PROJECT_ID?} with your project name
-  member: user:kimwnasptd@arrikto.com
+  member: user:jeremy@lewi.us
   # You should aim to scope down the permissions you needed
   # right now owner is needed to deploy kubeflow
   role: roles/owner
