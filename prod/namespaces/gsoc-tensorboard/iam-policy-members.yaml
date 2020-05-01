@@ -6,7 +6,7 @@
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: jeremy-owner3
+  name: jeremy-owner4
 spec:
   # replace ${PROJECT_ID?} with your project name
   member: "user:jeremy@lewi.us"
@@ -40,7 +40,7 @@ spec:
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: test-policy
+  name: test-policy2
 spec:
   # replace ${PROJECT_ID?} with your project name
   member: "serviceAccount:jlewi-test@gsoc-tensorboard.iam.gserviceaccount.com"
