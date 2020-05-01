@@ -11,6 +11,6 @@ metadata:
     cnrm.cloud.google.com/auto-create-network: "true"
   labels:
     label-one: "value-one"
-  name: gsoc-tensorboard
+  name: gsoc-kf-example
 spec:
-  name: gsoc-tensorboard
+  name: gsoc-kf-example
