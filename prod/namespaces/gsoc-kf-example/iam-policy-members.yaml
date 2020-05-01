@@ -30,5 +30,5 @@ spec:
     kind: Project
     # TODO(jlewi): This is the newer syntax which work in the next 
     # release of ACM
-    #external: projects/gsoc-tensorboard
-    external: "gsoc-tensorboard"
+    #external: projects/gsoc-kf-example
+    external: "gsoc-kf-example"
