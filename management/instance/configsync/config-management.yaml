@@ -6,9 +6,8 @@ metadata:
     gke.io/cluster: "gke://kf-kcc-admin/us-central1/kf-community-admin" # {"type":"string","x-kustomize":{"setBy":"kpt","partialSetters":[{"name":"gcloud.core.project","value":"kf-kcc-admin"},{"name":"name","value":"kf-community-admin"},{"name":"location","value":"us-central1"}]}}
 spec:
   clusterName: "gke://kf-kcc-admin/us-central1/kf-community-admin" # {"type":"string","x-kustomize":{"setBy":"kpt","partialSetters":[{"name":"gcloud.core.project","value":"kf-kcc-admin"},{"name":"name","value":"kf-community-admin"},{"name":"location","value":"us-central1"}]}}
-  git:
-    # TODO(jlewi): Change to kubeflow/community-infra once its merged.
-    syncRepo: "https://github.com/jlewi/community-infra.git" # {"type":"string","x-kustomize":{"setBy":"kpt","partialSetters":[{"name":"source_repo","value":"https://github.com/jlewi/community-infra.git"}]}}
+  git:    
+    syncRepo: "https://github.com/kubeflow/community-infra.git" # {"type":"string","x-kustomize":{"setBy":"kpt","partialSetters":[{"name":"source_repo","value":"https://github.com/jlewi/community-infra.git"}]}}
     secretType: none
     policyDir: "/prod" # {"$ref":"#/definitions/io.k8s.cli.setters.sync-repo-dir"}  
   # Set to true to install and enable Config Connector
