@@ -1,0 +1,16 @@
+# This project is for gsoc.
+# Gsoc ends 2020/09/08.
+# This project can and will be deleted after that date.
+apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+kind: Project
+metadata:
+  annotations:
+    # This should be the kf-community-folder
+    cnrm.cloud.google.com/folder-id: "303324597781"
+    # TODO(jlewi): I think this is required 
+    cnrm.cloud.google.com/auto-create-network: "true"
+  labels:
+    label-one: "value-one"
+  name: junxu-dev
+spec:
+  name: junxu-dev
