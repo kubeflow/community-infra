@@ -1,0 +1,7 @@
+# cloudresourcemanager, used for creating projects
+apiVersion: cnrm.cloud.google.com/v1alpha1
+kind: CloudService
+metadata:
+  name: dialogflow.googleapis.com
+spec:
+  service: dialogflow.googleapis.com
