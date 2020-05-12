@@ -23,10 +23,10 @@ PRs against this repository.
 * To create a new project
 
   1. Create subfolder `/prod/namespaces/${PROJECT}`
-  1. Create `/pord/namespaces/${PROJECT}/namespace.yaml` defining a kubernetes namespace
-  1. Create `/pord/namespaces/${PROJECT}/project.yaml` containing a [Project](https://cloud.google.com/config-connector/docs/reference/resources#project)
+  1. Create `/prod/namespaces/${PROJECT}/namespace.yaml` defining a kubernetes namespace
+  1. Create `/prod/namespaces/${PROJECT}/project.yaml` containing a [Project](https://cloud.google.com/config-connector/docs/reference/resources#project)
      resource defining your project
-  1. Create `/pord/namespaces/${PROJECT}/iam-policy-members.yaml` containing a [IAMPolicyMember](https://cloud.google.com/config-connector/docs/reference/resources#iampolicymember)
+  1. Create `/prod/namespaces/${PROJECT}/iam-policy-members.yaml` containing a [IAMPolicyMember](https://cloud.google.com/config-connector/docs/reference/resources#iampolicymember)
      resource granting IAM permissions to access the project is necessary
 
 * Wait for the PR to be approved
