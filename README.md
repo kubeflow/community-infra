@@ -2,7 +2,7 @@
 
 This is a repository for using declarative configs and GitOps to managed shared community Kubeflow GCP infrastructure.
 
-The management cluster is setup using the Kubeflow [management blueprint](kpt pkg get https://github.com/kubeflow/gcp-blueprints.git/management@master).
+The management cluster is setup using the Kubeflow [management blueprint](https://github.com/kubeflow/gcp-blueprints).
 
 ## Creating GCP Resources.
 
@@ -22,7 +22,7 @@ PRs against this repository.
 
 * To create a new project
 
-  1. Create subfolder `/prod/namespaces/${PROJECt}`
+  1. Create subfolder `/prod/namespaces/${PROJECT}`
   1. Create `/pord/namespaces/${PROJECT}/namespace.yaml` defining a kubernetes namespace
   1. Create `/pord/namespaces/${PROJECT}/project.yaml` containing a [Project](https://cloud.google.com/config-connector/docs/reference/resources#project)
      resource defining your project
@@ -34,7 +34,7 @@ PRs against this repository.
 
 ## Setup
 
-1. Follow the [management blueprint](kpt pkg get https://github.com/kubeflow/gcp-blueprints.git/management@master)
+1. Follow the [management blueprint](https://github.com/kubeflow/gcp-blueprints)
    
    * Do not install CNRM; we will use ConfigSync to install CNRM
 
