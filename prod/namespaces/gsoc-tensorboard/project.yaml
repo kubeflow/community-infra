@@ -14,3 +14,5 @@ metadata:
   name: gsoc-tensorboard
 spec:
   name: gsoc-tensorboard
+  billingAccountRef:
+    external: "01AF53-DC4A1B-4B1AA1"

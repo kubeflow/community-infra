@@ -14,3 +14,5 @@ metadata:
   name: gsoc-kf-example
 spec:
   name: gsoc-kf-example
+  billingAccountRef:
+    external: "01AF53-DC4A1B-4B1AA1"
