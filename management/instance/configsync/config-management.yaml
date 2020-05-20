@@ -10,7 +10,8 @@ spec:
     syncRepo: "https://github.com/kubeflow/community-infra.git" # {"type":"string","x-kustomize":{"setBy":"kpt","partialSetters":[{"name":"source_repo","value":"https://github.com/jlewi/community-infra.git"}]}}
     secretType: none
     policyDir: "/prod" # {"$ref":"#/definitions/io.k8s.cli.setters.sync-repo-dir"}  
-  # Set to true to install and enable Config Connector
+  # Don't install configConnector because it
+  # installs an old version.
   configConnector:
-    enabled: true
+    enabled: false
   sourceFormat: hierarchy
