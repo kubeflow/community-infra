@@ -1,7 +1,11 @@
 # cloudresourcemanager, used for creating projects
-apiVersion: cnrm.cloud.google.com/v1alpha1
-kind: CloudService
+apiVersion: serviceusage.cnrm.cloud.google.com/v1beta1
+kind: Service
 metadata:
   name: dialogflow.googleapis.com
+  # use the deletion policy of abandon to ensure that the service remains enabled when this resource is deleted.
+  cnrm.cloud.google.com/deletion-policy: "abandon"
+  # this is unnecessary with the deletion-policy of 'abandon', but useful if the abandon policy is removed.
+  cnrm.cloud.google.com/disable-dependent-services: "false"
 spec:
   service: dialogflow.googleapis.com
