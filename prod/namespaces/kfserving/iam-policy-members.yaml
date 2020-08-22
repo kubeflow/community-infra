@@ -9,7 +9,7 @@ metadata:
   name: mentor-owners
 spec:
   # replace ${PROJECT_ID?} with your project name
-  member: "group:kfserving@kubeflow.org"
+  member: "group:kfserving-owners@kubeflow.org"
   # You should aim to scope down the permissions you needed
   # right now owner is needed to deploy kubeflow
   # Note: You can't grant owner permissions this way
