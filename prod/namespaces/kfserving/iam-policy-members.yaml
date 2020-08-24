@@ -6,10 +6,10 @@
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: mentor-owners
+  name: kfserving-owners
 spec:
   # replace ${PROJECT_ID?} with your project name
-  member: "group:kfserving-owners@kubeflow.org"
+  member: "dsun20@bloomberg.net"
   # You should aim to scope down the permissions you needed
   # right now owner is needed to deploy kubeflow
   # Note: You can't grant owner permissions this way
