@@ -30,4 +30,4 @@ spec:
     kind: Project
     # TODO(jlewi): This is the newer syntax which work in the next 
     # release of ACM
-    external: "kfserving"
+    external: "kfserving-test"
