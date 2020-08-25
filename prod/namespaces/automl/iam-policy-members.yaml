@@ -1,0 +1,35 @@
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: automl-owners
+spec:
+  member: user:andrey.velichkevich@gmail.com
+  role: roles/owner
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: automl
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: automl-owners
+spec:
+  member: user:gaoce@caicloud.io
+  role: roles/owner
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: automl
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: automl-owners
+spec:
+  member: user:johnugeorge109@gmail.com
+  role: roles/owner
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: automl
