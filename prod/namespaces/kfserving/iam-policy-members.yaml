@@ -9,7 +9,7 @@ metadata:
   name: kfserving-owners
 spec:
   # replace ${PROJECT_ID?} with your project name
-  member: "dsun20@bloomberg.net"
+  member: "dsun20@bloomberg.net,hejinchi@cn.ibm.com"
   # You should aim to scope down the permissions you needed
   # right now owner is needed to deploy kubeflow
   # Note: You can't grant owner permissions this way
