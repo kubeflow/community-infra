@@ -1,0 +1,51 @@
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: training-owner-gaocegege
+spec:
+  member: user:gaoce@caicloud.io
+  role: roles/owner
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: training
+
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: training-owner-jeffwan
+spec:
+  member: "user:seedjeffwan@gmail.com"
+  role: roles/owner
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: training
+
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: training-owner-johnugeorge
+spec:
+  member: user:johnugeorge109@gmail.com
+  role: roles/owner
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: training
+
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: training-owner-terrytangyuan
+spec:
+  member: user:terrytangyuan@gmail.com
+  role: roles/owner
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: training
