@@ -1,10 +1,10 @@
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: automl-owner-andreyvelich
+  name: automl-editor-andreyvelich
 spec:
   member: user:andrey.velichkevich@gmail.com
-  role: roles/owner
+  role: roles/editor
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
@@ -13,10 +13,10 @@ spec:
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: automl-owner-gaocegege
+  name: automl-editor-gaocegege
 spec:
   member: user:gaoce@caicloud.io
-  role: roles/owner
+  role: roles/editor
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
@@ -25,10 +25,10 @@ spec:
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: automl-owner-johnugeorge
+  name: automl-editor-johnugeorge
 spec:
   member: user:johnugeorge109@gmail.com
-  role: roles/owner
+  role: roles/editor
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
