@@ -1,7 +1,7 @@
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: automl-owners
+  name: automl-owner-andreyvelich
 spec:
   member: user:andrey.velichkevich@gmail.com
   role: roles/owner
@@ -13,7 +13,7 @@ spec:
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: automl-owners
+  name: automl-owner-gaocegege
 spec:
   member: user:gaoce@caicloud.io
   role: roles/owner
@@ -25,10 +25,22 @@ spec:
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: automl-owners
+  name: automl-owner-johnugeorge
 spec:
   member: user:johnugeorge109@gmail.com
   role: roles/owner
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: automl
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: automl-editor-ci
+spec:
+  member: serviceAccount:kubeflow-testing@automl.iam.gserviceaccount.com
+  role: roles/editor
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
