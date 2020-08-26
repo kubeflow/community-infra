@@ -5,7 +5,7 @@ metadata:
   name: training-owner-gaocegege
 spec:
   member: user:gaoce@caicloud.io
-  role: roles/owner
+  role: roles/editor
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
@@ -17,8 +17,8 @@ kind: IAMPolicyMember
 metadata:
   name: training-owner-jeffwan
 spec:
-  member: "user:seedjeffwan@gmail.com"
-  role: roles/owner
+  member: user:seedjeffwan@gmail.com
+  role: roles/editor
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
@@ -31,7 +31,7 @@ metadata:
   name: training-owner-johnugeorge
 spec:
   member: user:johnugeorge109@gmail.com
-  role: roles/owner
+  role: roles/editor
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
@@ -44,7 +44,20 @@ metadata:
   name: training-owner-terrytangyuan
 spec:
   member: user:terrytangyuan@gmail.com
-  role: roles/owner
+  role: roles/editor
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: training
+
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: training-editors
+spec:
+  member: serviceAccount:kubeflow-testing@kubeflow-ci.iam.gserviceaccount.com
+  role: roles/editor
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
