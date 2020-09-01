@@ -4,7 +4,7 @@ metadata:
   name: kfserving-owners-1
 spec:
   member: "user:dsun20@bloomberg.net"
-  role: roles/owner
+  role: roles/editor
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
@@ -16,7 +16,7 @@ metadata:
   name: kfserving-owners-2
 spec:
   member: "user:hejinchi@cn.ibm.com"
-  role: roles/owner
+  role: roles/editor
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
@@ -28,7 +28,7 @@ metadata:
   name: kfserving-owners-3
 spec:
   member: "user:yliu989@bloomberg.net"
-  role: roles/owner
+  role: roles/editor
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
