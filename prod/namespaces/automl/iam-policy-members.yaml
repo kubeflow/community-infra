@@ -1,0 +1,47 @@
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: automl-editor-andreyvelich
+spec:
+  member: user:andrey.velichkevich@gmail.com
+  role: roles/editor
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: automl
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: automl-editor-gaocegege
+spec:
+  member: user:gaoce@caicloud.io
+  role: roles/editor
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: automl
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: automl-editor-johnugeorge
+spec:
+  member: user:johnugeorge109@gmail.com
+  role: roles/editor
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: automl
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: automl-editor-ci
+spec:
+  member: serviceAccount:kubeflow-testing@kubeflow-ci.iam.gserviceaccount.com
+  role: roles/editor
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: automl
