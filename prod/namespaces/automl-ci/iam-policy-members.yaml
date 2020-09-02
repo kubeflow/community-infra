@@ -45,3 +45,27 @@ spec:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
     external: automl-ci
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: automl-builds-editor-ci
+spec:
+  member: serviceAccount:kubeflow-testing@kubeflow-ci.iam.gserviceaccount.com
+  role: roles/cloudbuild.builds.editor
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: automl-ci
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: automl-container-admin-ci
+spec:
+  member: serviceAccount:kubeflow-testing@kubeflow-ci.iam.gserviceaccount.com
+  role: roles/container.admin
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: automl-ci
