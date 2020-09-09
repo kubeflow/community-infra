@@ -24,7 +24,7 @@ PRs against this repository.
 
   1. Create subfolder `/prod/namespaces/${PROJECT}`.
 
-  1. Create `/prod/namespaces/${PROJECT}/namespace.yaml` defining a kubernetes namespace.
+  1. Create `/prod/namespaces/${PROJECT}/namespace.yaml` defining a Kubernetes namespace.
   Namespace name should be equal to `${PROJECT}` name.
 
   1. Create `/prod/namespaces/${PROJECT}/project.yaml` containing a
@@ -36,6 +36,7 @@ PRs against this repository.
       You can give `roles/editor` to your GCP user account to view created project.
 
       In addition to user permissions, you have to give access to this service account: `serviceAccount:kubeflow-testing@kubeflow-ci.iam.gserviceaccount.com`.
+
       `kubeflow-testing` service account should have these permissions:
         - `roles/editor` to modify GCP resources.
         - `roles/cloudbuild.builds.editor` to create Cloud Builds.
@@ -44,8 +45,8 @@ PRs against this repository.
 
 * Wait for the PR to be approved
 
-* Once the PR is merged the resources should be created automatically and you should be able to access created GCP project.
-You can `kubectl describe` appropriate resource in `kf-community-admin` cluster to check status.
+* Once the PR is merged the resources should be created automatically and you can access created GCP project.
+You can run `kubectl describe` on appropriate resource in `kf-community-admin` cluster to check status.
 
 ## Setup
 
