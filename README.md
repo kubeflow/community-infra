@@ -6,7 +6,7 @@ The management cluster is setup using the Kubeflow [management blueprint](https:
 
 ## Creating GCP Resources.
 
-If you need to create GCP resources for Kubeflow or gain access to GCP resoruces you do so by creating
+If you need to create GCP resources for Kubeflow or gain access to GCP resources you do so by creating
 PRs against this repository.
 
 * We use [ACM](https://cloud.google.com/anthos-config-management/docs/concepts/repo) to sync
@@ -20,17 +20,32 @@ PRs against this repository.
 
   * There should be a namespace for every GCP project that is managed
 
-* To create a new project
+* Follow these steps to create new project. Note that `${PROJECT}` name must be globally unique across all GCP projects.
 
-  1. Create subfolder `/prod/namespaces/${PROJECT}`
-  1. Create `/prod/namespaces/${PROJECT}/namespace.yaml` defining a kubernetes namespace
-  1. Create `/prod/namespaces/${PROJECT}/project.yaml` containing a [Project](https://cloud.google.com/config-connector/docs/reference/resources#project)
-     resource defining your project
-  1. Create `/prod/namespaces/${PROJECT}/iam-policy-members.yaml` containing a [IAMPolicyMember](https://cloud.google.com/config-connector/docs/reference/resources#iampolicymember)
-     resource granting IAM permissions to access the project is necessary
+  1. Create subfolder `/prod/namespaces/${PROJECT}`.
+
+  1. Create `/prod/namespaces/${PROJECT}/namespace.yaml` defining a kubernetes namespace.
+  Namespace name should be equal to `${PROJECT}` name.
+
+  1. Create `/prod/namespaces/${PROJECT}/project.yaml` containing a
+  [`Project`](https://cloud.google.com/config-connector/docs/reference/resource-docs/resourcemanager/project) resource defining your project.
+
+  1. Create `/prod/namespaces/${PROJECT}/iam-policy-members.yaml` containing a [`IAMPolicyMember`](https://cloud.google.com/config-connector/docs/reference/resource-docs/iam/iampolicymember) resource list with necessary IAM permissions to access the project.
+  Each `IAMPolicyMember` should have unique name.
+
+      You can give `roles/editor` to your GCP user account to view created project.
+
+      In addition to user permissions, you have to give access to this service account: `serviceAccount:kubeflow-testing@kubeflow-ci.iam.gserviceaccount.com`.
+      `kubeflow-testing` service account should have these permissions:
+        - `roles/editor` to modify GCP resources.
+        - `roles/cloudbuild.builds.editor` to create Cloud Builds.
+        - `roles/container.admin` to manage Kubernetes clusters.
+
 
 * Wait for the PR to be approved
-* Once the PR is merged the resources should be created automatically.
+
+* Once the PR is merged the resources should be created automatically and you should be able to access created GCP project.
+You can `kubectl describe` appropriate resource in `kf-community-admin` cluster to check status.
 
 ## Setup
 
