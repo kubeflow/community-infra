@@ -35,7 +35,9 @@ PRs against this repository.
 
       You can give `roles/editor` to your GCP user account to view created project.
 
-      In addition to user permissions, you have to give access to this service account: `serviceAccount:kubeflow-testing@kubeflow-ci.iam.gserviceaccount.com`.
+      If you want to integrate your project with `kubeflow-ci`,
+      you have to give access to this service account: `serviceAccount:kubeflow-testing@kubeflow-ci.iam.gserviceaccount.com`.
+
 
       `kubeflow-testing` service account should have these permissions:
         - `roles/editor` to modify GCP resources.
