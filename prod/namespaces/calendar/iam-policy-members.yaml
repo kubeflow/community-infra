@@ -1,0 +1,47 @@
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: calendar-editor-karlschriek
+spec:
+  member: user:kschriek@gmail.com
+  role: roles/editor
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: calendar
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: calendar-editor-ci
+spec:
+  member: serviceAccount:kubeflow-testing@kubeflow-ci.iam.gserviceaccount.com
+  role: roles/editor
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: calendar
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: calendar-builds-editor-ci
+spec:
+  member: serviceAccount:kubeflow-testing@kubeflow-ci.iam.gserviceaccount.com
+  role: roles/cloudbuild.builds.editor
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: calendar
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: calendar-container-admin-ci
+spec:
+  member: serviceAccount:kubeflow-testing@kubeflow-ci.iam.gserviceaccount.com
+  role: roles/container.admin
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: calendar-calendar
