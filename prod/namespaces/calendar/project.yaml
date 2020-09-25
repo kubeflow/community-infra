@@ -1,0 +1,14 @@
+# This project is for AutoML test infrastructure
+apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+kind: Project
+metadata:
+  annotations:
+    # This should be the kf-community-folder
+    cnrm.cloud.google.com/folder-id: "303324597781"
+    # TODO(jlewi): I think this is required
+    cnrm.cloud.google.com/auto-create-network: "true"
+  name: calendar
+spec:
+  name: calendar
+  billingAccountRef:
+    external: "01AF53-DC4A1B-4B1AA1"
