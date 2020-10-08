@@ -7,8 +7,8 @@ metadata:
     cnrm.cloud.google.com/folder-id: "303324597781"
     # TODO(jlewi): I think this is required
     cnrm.cloud.google.com/auto-create-network: "true"
-  name: calendar
+  name: kf-infra-gitops
 spec:
-  name: calendar
+  name: kf-infra-gitops
   billingAccountRef:
     external: "01AF53-DC4A1B-4B1AA1"
