@@ -27,6 +27,7 @@ spec:
   autoscaling:
     minNodeCount: 1
     maxNodeCount: 3
+  initialNodeCount: 1
   nodeConfig:
     diskSizeGb: 100
     diskType: pd-standard
