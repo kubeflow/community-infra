@@ -44,5 +44,3 @@ spec:
     apiVersion: secretmanager.cnrm.cloud.google.com/v1beta1
     kind: SecretManagerSecret
     external: projects/kf-infra-gitops/secrets/autobot-at-kubeflow-oauth
-
-roles/secretmanager.secretAccessor
