@@ -13,7 +13,8 @@ spec:
     # Per https://github.com/GoogleCloudPlatform/k8s-config-connector/issues/194
     # use upper case for the channels
     channel: REGULAR
-
+  workloadIdentityConfig:
+    identityNamespace: kf-infra-gitops.svc.id.goog
 --- 
 
 apiVersion: container.cnrm.cloud.google.com/v1beta1
@@ -39,6 +40,8 @@ spec:
       - "https://www.googleapis.com/auth/devstorage.read_only"
     metadata:
       disable-legacy-endpoints: "true"
+    workloadMetadataConfig:
+      nodeMetadata: GKE_METADATA_SERVER
   management:
     autoRepair: true
     autoUpgrade: true
