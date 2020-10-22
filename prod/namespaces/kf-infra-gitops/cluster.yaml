@@ -1,41 +1,41 @@
-  apiVersion: container.cnrm.cloud.google.com/v1beta1
-  kind: ContainerCluster
-  metadata:
-    annotations:
-      cnrm.cloud.google.com/remove-default-node-pool: "true"    
-    name: kf-org-admin
-  spec:
-    location: us-west1
-    initialNodeCount: 1
-    loggingService: logging.googleapis.com/kubernetes
-    monitoringService: monitoring.googleapis.com/kubernetes
+apiVersion: container.cnrm.cloud.google.com/v1beta1
+kind: ContainerCluster
+metadata:
+  annotations:
+    cnrm.cloud.google.com/remove-default-node-pool: "true"    
+  name: kf-org-admin
+spec:
+  location: us-west1
+  initialNodeCount: 1
+  loggingService: logging.googleapis.com/kubernetes
+  monitoringService: monitoring.googleapis.com/kubernetes
 
 --- 
 
- apiVersion: container.cnrm.cloud.google.com/v1beta1
-  kind: ContainerNodePool
-  metadata:
-    labels:
-      label-one: "value-one"
+apiVersion: container.cnrm.cloud.google.com/v1beta1
+kind: ContainerNodePool
+metadata:
+  labels:
+    label-one: "value-one"
+  name: kf-org-admin
+spec:
+  location: us-west
+  autoscaling:
+    minNodeCount: 1
+    maxNodeCount: 3
+  nodeConfig:
+    diskSizeGb: 100
+    diskType: pd-standard
+    preemptible: false      
+    machineType: e2-standard-4
+    oauthScopes:
+      - "https://www.googleapis.com/auth/logging.write"
+      - "https://www.googleapis.com/auth/monitoring"
+      - "https://www.googleapis.com/auth/storage"
+    metadata:
+      disable-legacy-endpoints: "true"
+  management:
+    autoRepair: true
+    autoUpgrade: true
+  clusterRef:
     name: kf-org-admin
-  spec:
-    location: us-west
-    autoscaling:
-      minNodeCount: 1
-      maxNodeCount: 3
-    nodeConfig:
-      diskSizeGb: 100
-      diskType: pd-standard
-      preemptible: false      
-      machineType: e2-standard-4
-      oauthScopes:
-        - "https://www.googleapis.com/auth/logging.write"
-        - "https://www.googleapis.com/auth/monitoring"
-        - "https://www.googleapis.com/auth/storage"
-      metadata:
-        disable-legacy-endpoints: "true"
-    management:
-      autoRepair: true
-      autoUpgrade: true
-    clusterRef:
-      name: kf-org-admin
