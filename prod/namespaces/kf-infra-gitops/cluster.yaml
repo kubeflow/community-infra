@@ -9,6 +9,10 @@ spec:
   initialNodeCount: 1
   loggingService: logging.googleapis.com/kubernetes
   monitoringService: monitoring.googleapis.com/kubernetes
+  releaseChannel:
+    # Per https://github.com/GoogleCloudPlatform/k8s-config-connector/issues/194
+    # use upper case for the channels
+    channel: REGULAR
 
 --- 
 
