@@ -23,7 +23,7 @@ metadata:
     label-one: "value-one"
   name: kf-org-admin
 spec:
-  location: us-west
+  location: us-west1
   autoscaling:
     minNodeCount: 1
     maxNodeCount: 3
