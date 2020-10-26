@@ -44,3 +44,34 @@ spec:
     apiVersion: secretmanager.cnrm.cloud.google.com/v1beta1
     kind: SecretManagerSecret
     external: projects/kf-infra-gitops/secrets/autobot-at-kubeflow-oauth
+
+---
+
+# The GSA kf-autobot needs to be able to read the secret containing autobot@kubeflow.org
+# credentials for the group sync
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: kf-autobot-groups-secret-accessor
+spec:
+  member: serviceAccount:kf-autobot@kf-infra-gitops.iam.gserviceaccount.com
+  role: roles/secretmanager.secretAccessor
+  resourceRef:
+    apiVersion: secretmanager.cnrm.cloud.google.com/v1beta1
+    kind: SecretManagerSecret
+    external: projects/kf-infra-gitops/secrets/autobot-at-kubeflow-oauth-admin-api
+
+---
+
+# The GSA kf-autobot needs GCS read access so we can ready the OAuth2 client stored thre
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: kf-autobot-groups-secret-accessor
+spec:
+  member: serviceAccount:kf-autobot@kf-infra-gitops.iam.gserviceaccount.com
+  role: roles/storage.objectViewer
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    kind: Project
+    external: projects/kf-infra-gitops
