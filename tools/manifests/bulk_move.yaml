@@ -1,0 +1,35 @@
+kind: BulkProjectMove
+metadata:
+  creationTimestamp: null
+spec:
+  organizationId: organizations/714441643818
+  moves:
+  - project: kf-load-test-project13   
+    folder: delete-failed
+  - project: kf-load-test-project16
+    folder: delete-failed
+  - project: kf-load-test-project29
+    folder: delete-failed
+  - project: kf-load-test-project5
+    folder: delete-failed
+  - project: kubeflow-dev
+    folder: delete-failed
+  - project: clarify
+    folder: community
+  - project: kubeflow-releasing
+    folder: ci-cd
+  - project: kubeflow-images-staging
+    folder: prod
+  - project: kubeflow-images-public
+    folder: prod
+  - project: jamesjwu
+    folder: googler-projects
+  - project: kubeflow-ap
+    folder: googler-projects
+  - project: kubeflow-fairing
+    folder: community  
+  - project: kubeflow-usage
+    folder: prod
+  - project: kubeflow-dns
+    folder: prod
+

@@ -1,0 +1,23 @@
+kind: BulkProjectDelete
+metadata:
+  creationTimestamp: null
+spec:
+  organizationId: organizations/714441643818
+  projects:
+  - gam-project-2yc-c5m-7ey
+  - gam-project-7wm-boe-h5b
+  - gam-project-hyq-7o2-0xk  
+  - kubeflow-dev  
+  - kubeflow-scale
+  - kf-codelab-admin
+  - hub-bug-bash
+  # Waiting on confirmation to delete kubeflow-usage
+  # - kubeflow-usage
+  folders:  
+  - demo-projects
+  - experimental
+  - codelabs
+  - kubeflow-codelabs
+  - contributors
+  - google
+  - gcp-deploy
