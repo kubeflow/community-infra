@@ -1,0 +1,13 @@
+kind: BulkProjectDelete
+spec:
+  projects:
+  - kf-gcp-deploy-loadtest-1
+  - kf-gcp-deploy-loadtest-2
+  - kf-gcp-deploy-loadtest-3
+  - kf-gcp-deploy-loadtest-4
+  - kf-gcp-deploy-t1
+  - kf-gcp-deploy-t2
+  - kf-gcp-deploy-test5
+  - kf-gcp-deploy0
+  - kf-load-test-project1
+  - kf-load-test-project2
