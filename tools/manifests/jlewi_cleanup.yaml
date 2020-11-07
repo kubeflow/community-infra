@@ -1,0 +1,6 @@
+kind: Cleanup
+spec:
+  projects:
+  - clarify
+  - kf-chatbot
+  - jlewi-dev
