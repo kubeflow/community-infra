@@ -1,0 +1,14 @@
+updates:
+- assignees:
+  - Bobgy
+  - james-jwu
+  - jlewi
+  - neuromage
+  directory: tools
+  open-pull-requests-limit: 10
+  package-ecosystem: gomod
+  reviewers:
+  - Bobgy
+  schedule:
+    interval: daily
+version: 2
